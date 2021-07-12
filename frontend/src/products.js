@@ -44,7 +44,7 @@ const products = [
     image: '/images/belgique.jpeg',
     description:
         'Maillot domicile de l\'Équipe de Belgique',
-    brand: 'Nike',
+    brand: 'Adidas',
     category: 'Maillot Domicile',
     price: 69.99,
     countInStock: 11,
@@ -73,7 +73,7 @@ const products = [
     brand: 'Puma',
     category: 'Maillot Domicile',
     price: 79.99,
-    countInStock: 0,
+    countInStock: 3,
     rating: 4,
     numReviews: 12,
   },

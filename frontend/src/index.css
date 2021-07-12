@@ -17,9 +17,50 @@ background-color: #1EB6CB;
     width: 30%;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.product_title {
+   font-size: 1rem;
+    text-align: center;
+}
+.product_rating {
+    text-align: end;
+}
+.product_price {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.product_left {
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+
+/*Responsive */
+
 @media screen and (max-width: 768px) {
     .navlogo {
         width: 60%;
+    }
+    .product_title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .product_price {
+        text-align: center;
+        font-size: 3rem;
+        padding: 2rem;
+    }
+    .product_left {
+        text-align: center;
+        color: red;
+        font-weight: 700;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 360px) {

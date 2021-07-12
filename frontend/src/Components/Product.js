@@ -13,20 +13,24 @@ const Product = ({ product }) => {
             </a>
 
             <Card.Body>
-                <Card.Title as="div">
+                <Card.Title as="h2" className="product_title">
                     <strong>{product.name}</strong>
                 </Card.Title>
 
-                <Card.Text as="div">
+                <Card.Text as="div" className="product_rating">
                     <Rating
                         value={product.rating}
                         text={`${product.numReviews} avis`}
                         // color="#FBC740"
                     />
                 </Card.Text>
-                <Card.Text as="h3" className="price">{product.price} €</Card.Text>
+                <Card.Text as="h3" className="product_price">
+                    {product.price} €
+                </Card.Text>
 
-                <Card.Text as="p">Encore {product.countInStock} disponibles !</Card.Text>
+                <Card.Text as="p" className="product_left">
+                    Encore {product.countInStock} disponibles !
+                </Card.Text>
 
             </Card.Body>
 
