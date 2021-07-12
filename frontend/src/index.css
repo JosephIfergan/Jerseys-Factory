@@ -4,3 +4,26 @@ main {
 .price {
     margin: 1rem ;
 }
+.card img {
+    border: 0;
+}
+.navbar {
+background-color: #1EB6CB;
+}
+.navbar-brand {
+    width: 60%;
+}
+.navlogo {
+    width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .navlogo {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .navlogo {
+        width: 80%;
+    }
+}
