@@ -10,6 +10,9 @@ main {
 .navbar {
 background-color: #1EB6CB;
 }
+.navbar-nav {
+    text-align: end;
+}
 .navbar-brand {
     width: 60%;
 }
@@ -18,7 +21,7 @@ background-color: #1EB6CB;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white;
+    color: #DCEAEA;
 }
 
 .product_title {
@@ -42,6 +45,12 @@ background-color: #1EB6CB;
 
 
 /*Responsive */
+
+@media screen and (max-width: 1024px) {
+    .navbar-dark .navbar-nav .nav-link {
+        color: white;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .navlogo {
