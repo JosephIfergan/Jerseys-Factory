@@ -11,7 +11,7 @@ const Product = ({ product }) => {
                     className="card"
                     src={product.image}
                     variant='top'/>
-                <img className="promo" src="../../images/hot-sale.png"/>
+                <img className="promo" src="../../images/hot-sale.png" alt="hot sale"/>
             </Link>
 
             <Card.Body>
