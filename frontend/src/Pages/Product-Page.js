@@ -15,7 +15,7 @@ const ProductPage = ({ match }) => {
             updateProduct(data)
         }
         getProduct()
-    }, [])
+    }, [match])
     return (
         <>
             <Link className="btn btn-info rounded my-3" to="/">Retour</Link>
