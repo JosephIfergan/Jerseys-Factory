@@ -6,7 +6,6 @@ const products = [
     description:
       'Maillot domicile de l\'Équipe de France',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 89.99,
     countInStock: 0,
     rating: 4.5,
@@ -19,7 +18,6 @@ const products = [
     description:
         'Maillot domicile de l\'Allemagne',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 59.99,
     countInStock: 7,
     rating: 4.0,
@@ -32,7 +30,6 @@ const products = [
     description:
         'Maillot domicile de l\'Angleterre',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 59.99,
     countInStock: 5,
     rating: 3,
@@ -45,7 +42,6 @@ const products = [
     description:
         'Maillot domicile de l\'Équipe de Belgique',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 69.99,
     countInStock: 11,
     rating: 5,
@@ -58,7 +54,6 @@ const products = [
     description:
         'Maillot domicile de l\'Équipe d\'Espagne',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 49.99,
     countInStock: 7,
     rating: 3.5,
@@ -71,7 +66,6 @@ const products = [
     description:
         'Maillot de l\'Équipe d\'Italie',
     brand: 'Puma',
-    category: 'Maillot Domicile',
     price: 79.99,
     countInStock: 3,
     rating: 4,
@@ -84,7 +78,6 @@ const products = [
     description:
         'Maillot domicile de l\'Équipe des Pays-Bas',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 49.99,
     countInStock: 10,
     rating: 4.5,
@@ -97,7 +90,6 @@ const products = [
     description:
         'Maillot domicile de l\'Équipe du Portugal',
     brand: 'Nike',
-    category: 'Maillot Domicile',
     price: 89.99,
     countInStock: 10,
     rating: 4.5,

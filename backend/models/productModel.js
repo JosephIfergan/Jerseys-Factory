@@ -23,11 +23,11 @@ const productSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     },
-    image: {
+    name: {
         type: String,
         required: true
     },
-    team: {
+    image: {
         type: String,
         required: true
     },
