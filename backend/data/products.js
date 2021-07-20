@@ -1,7 +1,6 @@
 const products = [
   {
-    _id: '1',
-    name: 'Maillot Équipe de France',
+    name: 'Maillot Équipe de France KOALA',
     image: '/images/france.jpeg',
     description:
       'Maillot domicile de l\'Équipe de France',
@@ -12,7 +11,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Maillot Équipe d\'Allemagne',
     image: '/images/allemagne.jpeg',
     description:
@@ -24,7 +22,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Maillot Équipe d\'Angleterre',
     image: '/images/angleterre.jpeg',
     description:
@@ -36,7 +33,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Maillot Équipe de Beglique',
     image: '/images/belgique.jpeg',
     description:
@@ -48,7 +44,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Maillot Équipe d\'Espagne',
     image: '/images/espagne.jpeg',
     description:
@@ -60,7 +55,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Maillot Équipe d\'Italie',
     image: '/images/italie.jpeg',
     description:
@@ -72,7 +66,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'Maillot Équipe des Pays-Bas',
     image: '/images/paysbas.jpeg',
     description:
@@ -84,7 +77,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '8',
     name: 'Maillot Équipe du Portugal',
     image: '/images/portugal.jpeg',
     description:
