@@ -1,6 +1,6 @@
 const products = [
   {
-    name: 'Maillot Équipe de France KOALA',
+    name: 'Maillot Équipe de France',
     image: '/images/france.jpeg',
     description:
       'Maillot domicile de l\'Équipe de France',
