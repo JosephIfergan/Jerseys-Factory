@@ -63,7 +63,7 @@ const ProductPage = ({ history, match }) => {
                                     <ListGroup>
                                         <ListGroup.Item>
                                             <Row>
-                                                <Col>Price:</Col>
+                                                <Col>Prix :</Col>
                                                 <Col>
                                                     <strong>{product.price} €</strong>
                                                 </Col>
