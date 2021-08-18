@@ -12,6 +12,8 @@ import Cart from "./Pages/Cart";
 import Shipping from "./Pages/Shipping";
 import Payment from "./Pages/Payment";
 import PlaceOrder from "./Pages/PlaceOrder";
+import Order from "./Pages/Order";
+
 
 
 const App = () => {
@@ -27,6 +29,7 @@ const App = () => {
                     <Route path="/shipping" exact component={Shipping}/>
                     <Route path="/payment" exact component={Payment}/>
                     <Route path="/placeorder" exact component={PlaceOrder}/>
+                    <Route path="/order/:id" exact component={Order}/>
                     <Route path="/product/:id" component={ProductPage}/>
                     <Route path="/cart/:id?" component={Cart}/>
                     {/*Le "?" permet d'y accéder même si le panier est vide et donc qu'il n'y pas d'ID */}
