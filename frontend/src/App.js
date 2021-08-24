@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Container } from 'react-bootstrap';
 import Home from "./Pages/Home"
 import NotFound from "./Pages/NotFound";
@@ -24,8 +24,9 @@ const App = () => {
             <Header/>
             <main className="py-3">
                 <Container>
+                    <Switch>
                     <Route path="/" exact component={Home}/>
-                    <Route component={NotFound}/>
+                    <Route path='/404' component={NotFound} />
                     <Route path="/login" exact component={Login}/>
                     <Route path="/register" exact component={Register}/>
                     <Route path="/profile" exact component={Profile}/>
@@ -37,6 +38,8 @@ const App = () => {
                     <Route path="/cart/:id?" component={Cart}/>
                     <Route path="/admin/userlist" component={UserList}/>
                     {/*Le "?" permet d'y accéder même si le panier est vide et donc qu'il n'y pas d'ID */}
+                    <Redirect to="/404" />
+                    </Switch>
                 </Container>
             </main>
             <Footer/>
