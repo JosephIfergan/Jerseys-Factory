@@ -111,7 +111,7 @@ const registerUser = asyncHandler(async (req, res) => {
 // Avoir accés à tous les utilisateurs
 
 const getUsers = asyncHandler(async (req, res) => {
-    const user = await User.find()
+    const users = await User.find({})
 res.json(users)
 })
 
