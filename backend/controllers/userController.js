@@ -105,4 +105,15 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 })
 
-export { authUser, registerUser, getUserProfile, updateUserProfile }
+
+
+// GET /api/users
+// Avoir accés à tous les utilisateurs
+
+const getUsers = asyncHandler(async (req, res) => {
+    const user = await User.find()
+res.json(users)
+})
+
+
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers }
