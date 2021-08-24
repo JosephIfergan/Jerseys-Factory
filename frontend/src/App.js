@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import { Container } from 'react-bootstrap';
-import Home from "./Pages/Home";
+import Home from "./Pages/Home"
+import NotFound from "./Pages/NotFound";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Profile from "./Pages/Profile";
@@ -24,6 +25,7 @@ const App = () => {
             <main className="py-3">
                 <Container>
                     <Route path="/" exact component={Home}/>
+                    <Route component={NotFound}/>
                     <Route path="/login" exact component={Login}/>
                     <Route path="/register" exact component={Register}/>
                     <Route path="/profile" exact component={Profile}/>
