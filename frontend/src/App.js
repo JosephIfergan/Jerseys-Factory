@@ -15,6 +15,7 @@ import Payment from "./Pages/Payment";
 import PlaceOrder from "./Pages/PlaceOrder";
 import Order from "./Pages/Order";
 import UserList from "./Pages/UserList";
+import UserEdit from "./Pages/UserEdit";
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
                     <Route path="/product/:id" component={ProductPage}/>
                     <Route path="/cart/:id?" component={Cart}/>
                     <Route path="/admin/userlist" component={UserList}/>
+                    <Route path="/admin/user/:id/edit" component={UserEdit}/>
                     {/*Le "?" permet d'y accéder même si le panier est vide et donc qu'il n'y pas d'ID */}
                     <Redirect to="/404" />
                     </Switch>

@@ -24,7 +24,7 @@ const UserList = ({ history }) => {
         } else {
             history.push('/login')
         }
-    }, [dispatch, history, successDelete])
+    }, [dispatch, history, successDelete, userInfo])
 
     const deleteHandler = (id) => {
         if (window.confirm('Êtes-vous sûr de vouloir supprimer ce compte ?')) {
@@ -35,7 +35,7 @@ const UserList = ({ history }) => {
 
     return (
         <>
-            <h1>Users</h1>
+            <h1>Liste des utilisateurs</h1>
             {loading ? (
                 <Loader />
             ) : error ? (
