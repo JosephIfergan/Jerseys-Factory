@@ -115,5 +115,20 @@ const getUsers = asyncHandler(async (req, res) => {
 res.json(users)
 })
 
+// @desc    Delete user
+// @route   DELETE /api/users/:id
 
-export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers }
+const deleteUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id)
+
+    if (user) {
+        await user.remove()
+        res.json({ message: 'L\'utilisateur a bien été supprimé' })
+    } else {
+        res.status(404)
+        throw new Error('Utilisateur introuvable')
+    }
+})
+
+
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers, deleteUser }
