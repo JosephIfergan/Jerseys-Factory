@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import { Row, Col, Button, Card, Image, ListGroup, Form } from "react-bootstrap";
 import Rating from "../Components/Rating";
-import { listProductsDetails } from "../actions/productActions";
+import { listProductDetails } from "../actions/productActions";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
 
@@ -16,7 +16,7 @@ const ProductPage = ({ history, match }) => {
     const { loading, error, product } = productDetails
 
     useEffect(() => {
-        dispatch(listProductsDetails(match.params.id))
+        dispatch(listProductDetails(match.params.id))
 
     }, [dispatch, match])
 

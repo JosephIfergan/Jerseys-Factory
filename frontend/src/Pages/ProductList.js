@@ -64,7 +64,6 @@ const ProductList = ({ history, match }) => {
         dispatch(createProduct())
     }
 
-
     return (
         <>
             <Row className='align-items-center'>
