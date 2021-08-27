@@ -93,7 +93,6 @@ const ProductList = ({ history, match }) => {
                             <th>ID</th>
                             <th>TITRE</th>
                             <th>PRIX</th>
-                            <th>CATÉGORIE</th>
                             <th>MARQUE</th>
                             <th></th>
                         </tr>

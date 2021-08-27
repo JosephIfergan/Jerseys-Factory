@@ -19,7 +19,9 @@ main {
 .navlogo {
     width: 30%;
 }
-
+.outofstock {
+    color: red;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: #DCEAEA;
 }

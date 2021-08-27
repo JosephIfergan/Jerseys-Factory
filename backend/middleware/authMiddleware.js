@@ -30,10 +30,22 @@ const protect = asyncHandler(async (req, res, next) => {
     }
 })
 
+// const admin = (req, res, next) => {
+//     if (req.user && req.user.isAdmin) {
+//         next()
+//     } else {
+//         res.status(401)
+//         throw new Error('Non autorisé')
+//     }
+// }
+
 const admin = (req, res, next) => {
-    if (req.user && req.user.isAdmin) {
+    if (req.user) {
+        next() }
+    else if (req.user.isAdmin) {
         next()
-    } else {
+    }
+    else {
         res.status(401)
         throw new Error('Non autorisé')
     }

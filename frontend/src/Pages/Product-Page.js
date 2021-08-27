@@ -72,8 +72,8 @@ const ProductPage = ({ history, match }) => {
 
                                         <ListGroup.Item>
                                             <Row>
-                                                <Col>
-                                                    {product.countInStock > 0 ? "En stock" : "Article indisponible"}
+                                                <Col className="outofstock">
+                                                    {product.countInStock > 0 ? "En stock" : "En rupture de stock"}
                                                 </Col>
                                             </Row>
                                         </ListGroup.Item>
