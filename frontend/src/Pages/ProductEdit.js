@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
@@ -5,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import FormContainer from "../Components/FormContainer";
-import { listProductDetails } from "../actions/productActions";
+import { listProductDetails, updateProduct } from "../actions/productActions";
+import { PRODUCT_UPDATE_RESET } from "../constants/productConstants";
 
 
 const ProductEdit = ({ match, history }) => {
@@ -17,15 +19,25 @@ const ProductEdit = ({ match, history }) => {
     const [brand, setBrand] = useState('')
     const [countInStock, setCountInStock] = useState(0)
     const [description, setDescription] = useState('')
+    const [uploading, setUploading] = useState(false)
 
     const dispatch = useDispatch()
 
     const productDetails = useSelector((state) => state.productDetails)
     const { loading, error, product } = productDetails
 
+    const productUpdate = useSelector((state) => state.productUpdate)
+    const {
+        loading: loadingUpdate,
+        error: errorUpdate,
+        success: successUpdate,
+    } = productUpdate
 
     useEffect(() => {
-
+        if (successUpdate) {
+            dispatch({ type: PRODUCT_UPDATE_RESET })
+            history.push('/admin/productlist')
+        } else {
             if (!product.name || product._id !== productId) {
                 dispatch(listProductDetails(productId))
             } else {
@@ -36,11 +48,45 @@ const ProductEdit = ({ match, history }) => {
                 setCountInStock(product.countInStock)
                 setDescription(product.description)
             }
+        }
+    }, [dispatch, history, productId, product, successUpdate])
 
-    }, [dispatch, history, productId, product])
+    const uploadFileHandler = async (e) => {
+        const file = e.target.files[0]
+        const formData = new FormData()
+        formData.append('image', file)
+        setUploading(true)
+
+        try {
+            const config = {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            }
+
+            const { data } = await axios.post('/api/upload', formData, config)
+
+            setImage(data)
+            setUploading(false)
+        } catch (error) {
+            console.error(error)
+            setUploading(false)
+        }
+    }
 
     const submitHandler = (e) => {
         e.preventDefault()
+        dispatch(
+            updateProduct({
+                _id: productId,
+                name,
+                price,
+                image,
+                brand,
+                description,
+                countInStock,
+            })
+        )
     }
 
     return (
@@ -50,6 +96,8 @@ const ProductEdit = ({ match, history }) => {
             </Link>
             <FormContainer>
                 <h1>Mettre à jour le produit</h1>
+                {loadingUpdate && <Loader />}
+                {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? (
                     <Loader />
                 ) : error ? (
@@ -84,6 +132,13 @@ const ProductEdit = ({ match, history }) => {
                                 value={image}
                                 onChange={(e) => setImage(e.target.value)}
                             ></Form.Control>
+                            <Form.File
+                                id='image-file'
+                                label='Choisir une image'
+                                custom
+                                onChange={uploadFileHandler}
+                            ></Form.File>
+                            {uploading && <Loader />}
                         </Form.Group>
 
                         <Form.Group controlId='brand'>
@@ -117,7 +172,7 @@ const ProductEdit = ({ match, history }) => {
                         </Form.Group>
 
                         <Button type='submit' variant='primary'>
-                            Update
+                            Mettre à jour les produits
                         </Button>
                     </Form>
                 )}
