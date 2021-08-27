@@ -42,7 +42,6 @@ const createProduct = asyncHandler(async (req, res) => {
         user: req.user._id,
         image: '/images/sample.jpg',
         brand: 'Sample brand',
-        category: 'Sample category',
         countInStock: 0,
         numReviews: 0,
         description: 'Sample description',
@@ -62,7 +61,6 @@ const updateProduct = asyncHandler(async (req, res) => {
         description,
         image,
         brand,
-        category,
         countInStock,
     } = req.body
 
@@ -74,7 +72,6 @@ const updateProduct = asyncHandler(async (req, res) => {
         product.description = description
         product.image = image
         product.brand = brand
-        product.category = category
         product.countInStock = countInStock
 
         const updatedProduct = await product.save()
@@ -86,4 +83,52 @@ const updateProduct = asyncHandler(async (req, res) => {
 })
 
 
-export { getProducts, getProductsById, deleteProduct, createProduct, updateProduct }
+// @desc    Create new review
+// @route   POST /api/products/:id/reviews
+
+const createProductReview = asyncHandler(async (req, res) => {
+    const { rating, comment } = req.body
+
+    const product = await Product.findById(req.params.id)
+
+    if (product) {
+        const alreadyReviewed = product.reviews.find(
+            (review) => review.user.toString() === req.user._id.toString()
+        )
+
+        if (alreadyReviewed) {
+            res.status(400)
+            throw new Error('Vous avez déjà donné votre avis sur ce produit')
+        }
+
+        const review = {
+            name: req.user.name,
+            rating: Number(rating),
+            comment,
+            user: req.user._id,
+        }
+
+        product.reviews.push(review)
+
+        product.numReviews = product.reviews.length
+
+        product.rating =
+            product.reviews.reduce((acc, item) => item.rating + acc, 0) /
+            product.reviews.length
+
+        await product.save()
+        res.status(201).json({ message: 'Votre avis a bien été ajouté' })
+    } else {
+        res.status(404)
+        throw new Error('Produit introuvable')
+    }
+})
+
+
+
+export { getProducts,
+        getProductsById,
+        deleteProduct,
+        createProduct,
+        updateProduct,
+        createProductReview }
