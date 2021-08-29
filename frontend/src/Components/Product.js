@@ -33,7 +33,7 @@ const Product = ({ product }) => {
                 </Card.Text>
 
                 <Card.Text as="p" className="product_left">
-                    Encore {product.countInStock} disponibles !
+                    Encore {product.countInStock} disponible(s) !
                 </Card.Text>
 
             </Card.Body>

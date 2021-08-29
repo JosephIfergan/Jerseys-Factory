@@ -19,6 +19,8 @@ import UserEdit from "./Pages/UserEdit";
 import ProductList from "./Pages/ProductList";
 import ProductEdit from "./Pages/ProductEdit";
 import OrderList from "./Pages/OrderList";
+import HomeCarousel from "./Components/Home-Carousel";
+
 
 
 
@@ -27,6 +29,7 @@ const App = () => {
         <BrowserRouter>
             <Header/>
             <main className="py-3">
+                <Route path="/" exact component={HomeCarousel}/>
                 <Container>
                     <Switch>
                     <Route path="/" exact component={Home}/>

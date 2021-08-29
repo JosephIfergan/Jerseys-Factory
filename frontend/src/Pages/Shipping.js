@@ -73,7 +73,7 @@ const Shipping = ({ history }) => {
                         </Form.Control>
                     </Form.Group>
 
-                <Button type='submit' variant='primary'> Continuer </Button>
+                <Button type='submit' variant='info rounded'> Continuer </Button>
 
             </Form>
         </FormContainer>

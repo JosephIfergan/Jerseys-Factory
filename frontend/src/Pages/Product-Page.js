@@ -59,7 +59,7 @@ const ProductPage = ({ history, match }) => {
 
     return (
         <>
-            <Link className='btn btn-info rounded my-3' to='/'>
+            <Link className='btn btn-info rounded my-5' to='/'>
                 Retour
             </Link>
             {loading ? (
@@ -69,13 +69,14 @@ const ProductPage = ({ history, match }) => {
             ) : (
                 <>
                     <Row>
-                        <Col md={6}>
+                        <Col md={8} lg={5}>
                             <Image src={product.image} alt={product.name} fluid />
                         </Col>
-                        <Col md={3}>
+                        <Col md={10} lg={4}>
                             <ListGroup>
                                 <ListGroup.Item>
-                                    <h3>{product.name}</h3>
+                                    <h3 className="product_name">{product.name}</h3>
+                                    <hr/>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
                                     <Rating
@@ -83,13 +84,15 @@ const ProductPage = ({ history, match }) => {
                                         text={`${product.numReviews} avis`}
                                     />
                                 </ListGroup.Item>
-                                <ListGroup.Item>Prix : {product.price} €</ListGroup.Item>
+                                <ListGroup.Item className="price"> {product.price} €
+                                </ListGroup.Item>
                                 <ListGroup.Item>
-                                    Description: {product.description}
+                                    <hr/>
+                                    {product.description}
                                 </ListGroup.Item>
                             </ListGroup>
                         </Col>
-                        <Col md={3}>
+                        <Col md={5} lg={3} className="product_addtocart">
                             <Card>
                                 <ListGroup>
                                     <ListGroup.Item>
@@ -103,9 +106,10 @@ const ProductPage = ({ history, match }) => {
 
                                     <ListGroup.Item>
                                         <Row>
-                                            <Col>Statut :</Col>
                                             <Col>
-                                                {product.countInStock > 0 ? 'En stock' : 'En rupture de stock'}
+                                                {product.countInStock > 0 ?
+                                                    <p className="instock">En stock</p>
+                                                    : <p className="outstock">En rupture de stock</p> }
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
@@ -113,7 +117,7 @@ const ProductPage = ({ history, match }) => {
                                     {product.countInStock > 0 && (
                                         <ListGroup.Item>
                                             <Row>
-                                                <Col>Qty</Col>
+                                                <Col>Quantité</Col>
                                                 <Col>
                                                     <Form.Control
                                                         as='select'
@@ -136,7 +140,7 @@ const ProductPage = ({ history, match }) => {
                                     <ListGroup.Item>
                                         <Button
                                             onClick={addToCartHandler}
-                                            className='btn-block'
+                                            className='btn-block rounded bg-info'
                                             type='button'
                                             disabled={product.countInStock === 0}
                                         >
@@ -148,8 +152,10 @@ const ProductPage = ({ history, match }) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={6}>
+                        <Col className="ratings" md={8}>
+                            <hr/>
                             <h2>Avis</h2>
+
                             {product.reviews.length === 0 && <Message >Aucun avis sur ce produit</Message>}
                             <ListGroup>
                                 {product.reviews.map((review) => (
@@ -161,7 +167,7 @@ const ProductPage = ({ history, match }) => {
                                     </ListGroup.Item>
                                 ))}
                                 <ListGroup.Item>
-                                    <h2>Donnez votre avis sur ce produit !</h2>
+                                    <h2 className="ratings_title">Donnez votre avis sur ce produit !</h2>
                                     {successProductReview && (
                                         <Message variant='success'>
                                             Votre avis a bien été ajouté !

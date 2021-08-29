@@ -171,7 +171,7 @@ const ProductEdit = ({ match, history }) => {
                             ></Form.Control>
                         </Form.Group>
 
-                        <Button type='submit' variant='primary'>
+                        <Button type='submit' variant='info rounded'>
                             Mettre à jour les produits
                         </Button>
                     </Form>

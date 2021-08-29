@@ -99,7 +99,7 @@ const Cart = ({match, location, history}) => {
                         <ListGroup.Item>
                             <Button
                                 type='button'
-                                className='btn-block'
+                                className='btn-block btn-info rounded'
                                 disabled={cartItems.length === 0}
                                 onClick={checkoutButton}
                             >

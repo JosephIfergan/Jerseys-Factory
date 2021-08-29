@@ -66,7 +66,7 @@ const OrderList = ({ history }) => {
                             </td>
                             <td>
                                 <LinkContainer to={`/order/${order._id}`}>
-                                    <Button variant='light' className='btn-sm'>
+                                    <Button variant='primary' className='btn-sm bg-info rounded'>
                                         Détails
                                     </Button>
                                 </LinkContainer>

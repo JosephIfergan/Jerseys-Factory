@@ -55,7 +55,7 @@ const Profile = ({ location, history }) => {
 
     return <Row>
         <Col md={3}>
-            <h2>Mon profil</h2>
+            <h2 className="mb-3">Mon profil</h2>
             {confirmMessage && <Message variant='danger'>{confirmMessage}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {success && <Message variant='success'>Profil mis à jour avec succès !</Message>}
@@ -101,14 +101,14 @@ const Profile = ({ location, history }) => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'> Mettre à jour mon profil </Button>
+                <Button type='submit' variant='info rounded'> Mettre à jour mon profil </Button>
 
             </Form>
 
         </Col>
 
         <Col md={9}>
-            <h2> Mes commandes </h2>
+            <h2 className="mb-3"> Mes commandes </h2>
             {loadingOrders ? (
                 <Loader />
             ) : errorOrders ? (
@@ -148,7 +148,7 @@ const Profile = ({ location, history }) => {
                             </td>
                             <td>
                                 <LinkContainer to={`/order/${order._id}`}>
-                                    <Button className='btn-sm' variant='light'>
+                                    <Button className='btn-sm' variant='info rounded'>
                                         Details
                                     </Button>
                                 </LinkContainer>

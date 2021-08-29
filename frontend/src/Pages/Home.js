@@ -22,7 +22,7 @@ const Home = ({ match }) => {
 
     return (
         <>
-            <h1>Nos produits</h1>
+            <h1 className="home_title">Nos produits</h1>
             {loading ? (<Loader/>)
             : error ? (<Message variant="danger">{error}</Message>)
             : (<Row>
