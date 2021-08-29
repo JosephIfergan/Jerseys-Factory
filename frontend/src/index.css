@@ -14,10 +14,10 @@ main {
     text-align: end;
 }
 .navbar-brand {
-    width: 60%;
+    width: 30%;
 }
 .navlogo {
-    width: 30%;
+    width: 70%;
 }
 .outofstock {
     color: red;
@@ -62,9 +62,11 @@ main {
     top: 1px;
 }
 
-.kaka {
-    color: red;
+.search {
+    padding: 8px;
 }
+
+
 
 /*Responsive */
 
@@ -76,7 +78,7 @@ main {
 
 @media screen and (max-width: 768px) {
     .navlogo {
-        width: 60%;
+        width: 100%;
     }
     .product_title {
         font-size: 1.5rem;

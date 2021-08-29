@@ -30,6 +30,7 @@ const App = () => {
                 <Container>
                     <Switch>
                     <Route path="/" exact component={Home}/>
+                    <Route path="/search/:keyword" component={Home}/>
                     {/*<Route path='/404' component={NotFound} />*/}
                     <Route path="/login" exact component={Login}/>
                     <Route path="/register" exact component={Register}/>
