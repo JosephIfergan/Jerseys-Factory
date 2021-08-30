@@ -32,8 +32,10 @@ const Product = ({ product }) => {
                     {product.price} €
                 </Card.Text>
 
-                <Card.Text as="p" className="product_left">
-                    Encore {product.countInStock} disponible(s) !
+                <Card.Text as="div" className="product_left">
+                    {product.countInStock > 0 ?
+                        <p className="instock">Encore {product.countInStock} disponible(s) !</p>
+                        : <p className="outstock">En rupture de stock</p> }
                 </Card.Text>
 
             </Card.Body>

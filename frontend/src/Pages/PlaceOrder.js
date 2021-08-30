@@ -65,7 +65,7 @@ const PlaceOrder = ({ history }) => {
                         <ListGroup.Item>
                             <h2>Livraison</h2>
                             <p>
-                                <strong>Adresse : </strong>
+                                <strong className="mb-5 font-weight-bold text-dark">Adresse : </strong>
                                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
                                 {cart.shippingAddress.postalCode},{' '}
                                 {cart.shippingAddress.country}
@@ -74,12 +74,12 @@ const PlaceOrder = ({ history }) => {
 
                         <ListGroup.Item>
                             <h2>Mode de paiement</h2>
-                            <strong>Mode de paiement selectionné : </strong>
+                            <strong className="font-weight-bold text-dark">Mode de paiement selectionné : </strong>
                             {cart.paymentMethod}
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <h2>Votre panier</h2>
+                            <h2 className="my-5">Votre panier</h2>
                             {cart.cartItems.length === 0 ? (
                                 <Message>Votre panier est vide</Message>
                             ) : (

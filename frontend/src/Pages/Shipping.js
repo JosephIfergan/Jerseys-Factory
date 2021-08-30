@@ -26,7 +26,7 @@ const Shipping = ({ history }) => {
     return (
         <FormContainer>
             <CheckoutSteps step1 step2 />
-            <h1>Informations de livraison</h1>
+            <h1 className="my-5 text-center">Informations de livraison</h1>
             <Form onSubmit={submitHandler}>
                 <Form.Group controlId='address'>
                     <Form.Label> Adresse </Form.Label>

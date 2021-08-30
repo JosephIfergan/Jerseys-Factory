@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Container } from 'react-bootstrap';
 import Home from "./Pages/Home"
-// import NotFound from "./Pages/NotFound";
+import NotFound from "./Pages/NotFound";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Profile from "./Pages/Profile";
@@ -34,7 +34,7 @@ const App = () => {
                     <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/search/:keyword" component={Home}/>
-                    {/*<Route path='/404' component={NotFound} />*/}
+                    <Route path='/404' component={NotFound} />
                     <Route path="/login" exact component={Login}/>
                     <Route path="/register" exact component={Register}/>
                     <Route path="/profile" exact component={Profile}/>
@@ -50,7 +50,7 @@ const App = () => {
                     <Route path="/admin/product/:id/edit" component={ProductEdit}/>
                     <Route path="/admin/orderlist" component={OrderList}/>
                     {/*Le "?" permet d'y accéder même si le panier est vide et donc qu'il n'y pas d'ID */}
-                    {/*<Redirect to="/404" />*/}
+                    <Redirect to="/404" component={NotFound} />
                     </Switch>
                 </Container>
             </main>

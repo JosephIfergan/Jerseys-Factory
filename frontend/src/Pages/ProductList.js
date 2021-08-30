@@ -6,6 +6,7 @@ import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { listProducts, deleteProduct, createProduct } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+import {Link} from "react-router-dom";
 
 
 const ProductList = ({ history, match }) => {
@@ -122,6 +123,9 @@ const ProductList = ({ history, match }) => {
                         ))}
                         </tbody>
                     </Table>
+                    <Link className='btn btn-info rounded my-5' to='/'>
+                        Retour
+                    </Link>
                 </>
             )}
         </>

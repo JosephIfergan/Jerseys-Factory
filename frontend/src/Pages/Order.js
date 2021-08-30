@@ -91,7 +91,7 @@ const Order = ({ match, history }) => {
         <Message variant='danger'>{error}</Message>
     ) : (
         <>
-            <h1>Commande n° {order._id}</h1>
+            <h1 className="my-5">Commande n° {order._id}</h1>
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush'>

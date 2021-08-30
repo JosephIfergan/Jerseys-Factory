@@ -94,7 +94,7 @@ hr {
 }
 
 .instock, .outstock {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: 900;
 }
 .instock {
@@ -112,6 +112,56 @@ hr {
 .ratings_title {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+}
+
+footer a {
+    color: white;
+}
+
+.error404 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.social-icons a{
+    background-color:#eceeef;
+    color:#1EB6CB;
+    font-size:12px;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    text-align:center;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover{
+    color:#fff;
+    background-color:#29aafe
+}
+
+.social-icons a.facebook:hover{
+    background-color:#3b5998
+}
+.social-icons a.twitter:hover{
+    background-color:#00aced
+}
+.social-icons a.linkedin:hover{
+    background-color:#007bb6
+}
+.social-icons a.instagram:hover{
+    background-color:#ea4c89
+}
+
+footer .btn-sm {
+    padding: 0.5rem 0rem;
+}
+
+.fa-hotjar {
+    color: firebrick;
 }
 /*Responsive */
 

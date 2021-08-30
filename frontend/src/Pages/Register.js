@@ -39,7 +39,7 @@ const Register = ({ location, history }) => {
 
     return (
         <FormContainer>
-            <h1>S'inscrire</h1>
+            <h1 className="text-center my-5">S'inscrire</h1>
             {confirmMessage && <Message variant='danger'>{confirmMessage}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader/>}
@@ -84,13 +84,13 @@ const Register = ({ location, history }) => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'> S'inscrire ! </Button>
+                <Button type='submit' variant='info rounded'> S'inscrire ! </Button>
 
             </Form>
 
             <Row className='py-3'>
                 <Col>
-                    Déjà inscrit ? <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}> Se connecter ! </Link>
+                    Déjà client ? <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}> Se connecter ! </Link>
                 </Col>
             </Row>
         </FormContainer>

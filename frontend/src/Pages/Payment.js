@@ -27,7 +27,7 @@ const Payment = ({ history }) => {
     return (
         <FormContainer>
             <CheckoutSteps step1 step2 step3 />
-            <h1>Mode de paiement</h1>
+            <h1 className="my-5 text-center">Mode de paiement</h1>
             <Form onSubmit={submitHandler}>
                 <Form.Group>
                     <Form.Label as='legend'>Selectionnez un mode de paiement</Form.Label>
@@ -45,7 +45,7 @@ const Payment = ({ history }) => {
                     </Col>
                 </Form.Group>
 
-                <Button type='submit' variant='info rounded'>Continuer</Button>
+                <Button type='submit' variant='info rounded my-5'>Continuer</Button>
 
             </Form>
         </FormContainer>
