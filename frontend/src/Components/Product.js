@@ -34,7 +34,7 @@ const Product = ({ product }) => {
 
                 <Card.Text as="div" className="product_left">
                     {product.countInStock > 0 ?
-                        <p className="instock">Encore {product.countInStock} disponible(s) !</p>
+                        <p className="instock">Encore {product.countInStock} disponibles !</p>
                         : <p className="outstock">En rupture de stock</p> }
                 </Card.Text>
 

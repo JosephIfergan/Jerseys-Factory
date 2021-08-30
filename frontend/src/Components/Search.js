@@ -24,7 +24,7 @@ const Search = ({ history }) => {
             >
 
             </Form.Control>
-            <Button type='submit' className='search bg-info rounded'>
+            <Button type='submit' className='search bg-transparent'>
                 <i className="fas fa-search fa-2x"></i>
             </Button>
         </Form>

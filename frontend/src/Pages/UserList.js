@@ -35,7 +35,7 @@ const UserList = ({ history }) => {
 
     return (
         <>
-            <h1>Liste des utilisateurs</h1>
+            <h1 className="title my-5">Utilisateurs</h1>
             {loading ? (
                 <Loader />
             ) : error ? (

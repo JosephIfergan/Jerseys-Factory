@@ -26,9 +26,6 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/menu--v1.png" alt="logo du menu"/></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Route render={({ history }) => <Search history={history} />} />                        <Nav className="ml-auto">
-                            <LinkContainer to="/cart">
-                                <Nav.Link><i className="fas fa-shopping-cart fa-lg"></i> Panier</Nav.Link>
-                            </LinkContainer>
                             {userInfo ? (
 
                                 <NavDropdown title={userInfo.name} id='username'>
@@ -44,6 +41,7 @@ const Header = () => {
                                     </LinkContainer>
                                 )
                             }
+
                             {userInfo && userInfo.isAdmin && (
                                 <NavDropdown title='Admin Menu' id='adminmenu'>
                                     <LinkContainer to='/admin/userlist'>
@@ -57,6 +55,10 @@ const Header = () => {
                                     </LinkContainer>
                                 </NavDropdown>
                             )}
+
+                        <LinkContainer to="/cart">
+                            <Nav.Link><i className="fas fa-shopping-cart fa-lg"></i> Panier</Nav.Link>
+                        </LinkContainer>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

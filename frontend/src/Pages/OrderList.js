@@ -25,7 +25,7 @@ const OrderList = ({ history }) => {
 
     return (
         <>
-            <h1>Orders</h1>
+            <h1 className="title my-5">Commandes</h1>
             {loading ? (
                 <Loader />
             ) : error ? (

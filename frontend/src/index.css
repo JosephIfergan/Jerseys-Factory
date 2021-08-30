@@ -1,5 +1,6 @@
 main {
     min-height: 80vh;
+    padding-top: 0;
 }
 .price {
     margin: 1rem ;
@@ -8,7 +9,7 @@ main {
     border: 0;
 }
 .navbar, footer {
-    background-color: #1EB6CB;
+    background-color: #29aafe;
 }
 .navbar-nav {
     text-align: end;
@@ -19,11 +20,16 @@ main {
 .navlogo {
     width: 100%;
 }
+
 .outofstock {
     color: red;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: #DCEAEA;
+}
+
+#basic-navbar-nav {
+    font-size: 0.9rem;
 }
 
 .product_title {
@@ -49,10 +55,7 @@ main {
 .list-group-item {
     border: none;
 }
-.add-to-card {
-    background-color: #1EB6CB;
-    font-size: 1rem;
-}
+
 .promo {
     border-radius: 3px;
     font-size: 12px;
@@ -67,13 +70,26 @@ main {
 }
 
 .carousel {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
-
-.home_title {
-    margin: 7rem 0 5rem 0;
-    font-size: 2rem;
+.title,
+.home_title
+{
+    font-size: 30px;
+    color: #29aafe;
+    line-height: 1.6;
+    margin: 4rem 0;
+}
+.textp:before,
+.textp:after {
+    content: '';
+    width: 19%;
+    border-bottom: 1px solid #e8e8e8;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 50px;
 }
 
 .carousel-subtitle {
@@ -123,9 +139,9 @@ footer a {
     margin: 0 auto;
 }
 
-.social-icons a{
+.social-icons a {
     background-color:#eceeef;
-    color:#1EB6CB;
+    color:#29aafe;
     font-size:12px;
     display:inline-block;
     width:40px;
@@ -163,11 +179,113 @@ footer .btn-sm {
 .fa-hotjar {
     color: firebrick;
 }
+
+.bandeau {
+    background-color: #C8EAFF;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #00aced;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.banner-body{
+    position:relative;
+    margin-top: 10px;
+    animation-name: fadeUp;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.bandeau-new{
+    position:relative;
+    margin: 0 10px;
+    color: darkblue;
+    animation-duration: 10s;
+    animation-name: spanNew;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.bandeau-text{
+    position:relative;
+    margin: 0 10px;
+    animation-duration: 10s;
+    animation-name: spanText;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+
+@keyframes truck {
+    0% {
+        left:-40px;
+        opacity:0;
+    }
+    6%, 100% {
+        left:0;
+        opacity:1;
+    }
+}
+
+
+@keyframes spanNew {
+    0%, 5%{
+        left:-30px;
+        opacity:0;
+    }
+    15%{
+        left:0;
+        opacity:1;
+    }
+}
+
+@keyframes spanText {
+    0%, 10% {
+        top:-20px;
+        opacity:0;
+    }
+    20% {
+        top:0;
+        opacity:1;
+    }
+}
+
+
+@keyframes fadeUp {
+    0% {
+        opacity:0;
+    }
+    10%, 90%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+
+
+
+
+
+
 /*Responsive */
 
 @media screen and (max-width: 1024px) {
     .navbar-dark .navbar-nav .nav-link {
         color: white;
+    }
+    .home_title {
+        margin: 5rem 0 1rem 0;
+        font-size: 1.5rem;
+    }
+    .textp:before, .textp:after {
+        width: 10%;
     }
 }
 
@@ -196,7 +314,11 @@ footer .btn-sm {
     }
     .home_title {
         margin: 5rem 0 1rem 0;
-        font-size: 2rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .textp:before, .textp:after {
+        display: none;
     }
     .home_carousel {
         display: none;
@@ -210,4 +332,5 @@ footer .btn-sm {
     .navlogo {
         width: 80%;
     }
+
 }

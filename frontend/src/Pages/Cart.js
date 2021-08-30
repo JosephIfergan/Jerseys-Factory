@@ -34,7 +34,7 @@ const Cart = ({match, location, history}) => {
     return (
         <Row>
             <Col md={8}>
-                <h1 className="my-5">Votre panier</h1>
+                <h1 className="title my-5">Votre panier</h1>
                 {cartItems.length === 0 ? (
                     <Message variant="info">
                         Votre panier est vide <Link to="/"> Retour </Link>

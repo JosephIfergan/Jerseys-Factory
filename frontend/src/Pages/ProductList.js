@@ -69,7 +69,7 @@ const ProductList = ({ history, match }) => {
         <>
             <Row className='align-items-center'>
                 <Col>
-                    <h1>Produits</h1>
+                    <h1 className="title">Produits</h1>
                 </Col>
                 <Col className='text-right'>
                     <Button className=' btn-info rounded my-3' onClick={createProductHandler}>

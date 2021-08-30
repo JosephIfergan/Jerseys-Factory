@@ -207,7 +207,7 @@ const ProductPage = ({ history, match }) => {
                                                 type='submit'
                                                 variant='info rounded'
                                             >
-                                                Ajouter
+                                                Envoyer
                                             </Button>
                                         </Form>
                                     ) : (

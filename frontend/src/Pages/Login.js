@@ -32,7 +32,7 @@ const Login = ({ location, history }) => {
 
     return (
         <FormContainer>
-            <h1 className="text-center my-5">Se connecter</h1>
+            <h1 className="title text-center my-5">Se connecter</h1>
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader/>}
             <Form onSubmit={submitHandler}>
@@ -56,7 +56,7 @@ const Login = ({ location, history }) => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' className='bg-info rounded'> Se connecter </Button>
+                <Button type='submit' className='bg-info rounded my-3'> Se connecter </Button>
 
             </Form>
 

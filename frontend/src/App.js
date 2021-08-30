@@ -20,6 +20,7 @@ import ProductList from "./Pages/ProductList";
 import ProductEdit from "./Pages/ProductEdit";
 import OrderList from "./Pages/OrderList";
 import HomeCarousel from "./Components/Home-Carousel";
+import FreeShippingBanner from "./Components/FreeShippingBanner";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
         <BrowserRouter>
             <Header/>
             <main className="py-3">
+                <Route path="/" exact component={FreeShippingBanner}/>
                 <Route path="/" exact component={HomeCarousel}/>
                 <Container>
                     <Switch>

@@ -55,7 +55,7 @@ const UserEdit = ({ match, history }) => {
                 Retour
             </Link>
             <FormContainer>
-                <h1>Mettre à jour l'utilisateur</h1>
+                <h1 className="title my-3">Mettre à jour l'utilisateur</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? (
@@ -99,7 +99,7 @@ const UserEdit = ({ match, history }) => {
                             </Form.Check>
                         </Form.Group>
 
-                        <Button type='submit' variant='primary'>
+                        <Button type='submit' variant='info rounded my-3'>
                            Mettre à jour
                         </Button>
                     </Form>

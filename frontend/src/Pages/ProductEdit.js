@@ -95,7 +95,7 @@ const ProductEdit = ({ match, history }) => {
                 Retour
             </Link>
             <FormContainer>
-                <h1>Mettre à jour le produit</h1>
+                <h1 className="title">Mettre à jour le produit</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? (
@@ -166,12 +166,14 @@ const ProductEdit = ({ match, history }) => {
                             <Form.Control
                                 type='text'
                                 placeholder='Entrez la description'
+                                as='textarea'
+                                row='10'
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
 
-                        <Button type='submit' variant='info rounded'>
+                        <Button type='submit' variant='info rounded my-3'>
                             Mettre à jour les produits
                         </Button>
                     </Form>

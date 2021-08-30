@@ -55,7 +55,7 @@ const Profile = ({ location, history }) => {
 
     return <Row>
         <Col md={3}>
-            <h2 className="mb-3">Mon profil</h2>
+            <h2 className="title my-5">Mon profil</h2>
             {confirmMessage && <Message variant='danger'>{confirmMessage}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {success && <Message variant='success'>Profil mis à jour avec succès !</Message>}
@@ -108,7 +108,7 @@ const Profile = ({ location, history }) => {
         </Col>
 
         <Col md={9}>
-            <h2 className="mb-3"> Mes commandes </h2>
+            <h2 className="title my-5"> Mes commandes </h2>
             {loadingOrders ? (
                 <Loader />
             ) : errorOrders ? (
