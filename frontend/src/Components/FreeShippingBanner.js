@@ -5,7 +5,7 @@ const FreeShippingBanner = () => {
             <div className="bandeau">
                 <p className="banner-body">
                     <span className="bandeau-new">Nouveau !</span>
-                    <span className="bandeau-text">Livraison offerte dès 100€ d'achat !</span>
+                    <span className="bandeau-text">Livraison offerte dès 50€ d'achat !</span>
                 </p>
             </div>
     );

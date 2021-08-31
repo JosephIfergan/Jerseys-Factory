@@ -26,7 +26,7 @@ const PlaceOrder = ({ history }) => {
     cart.itemsPrice = addDecimals(
         cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     )
-    cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 4.99)
+    cart.shippingPrice = addDecimals(cart.itemsPrice > 50 ? 0 : 4.99)
     cart.totalPrice = (
         Number(cart.itemsPrice) +
         Number(cart.shippingPrice)
