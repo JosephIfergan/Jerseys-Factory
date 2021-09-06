@@ -91,7 +91,23 @@ const ProductPage = ({ history, match }) => {
                                     {product.description}
                                 </ListGroup.Item>
                             </ListGroup>
+
+                            <Form>
+                                <Form.Group controlId='size'>
+                                    <Form.Control
+                                        as='select'
+                                    >
+                                        <option value=''>Selectionnez la taille</option>
+                                        <option value='S'>S</option>
+                                        <option value='M'>M</option>
+                                        <option value='L'>L</option>
+                                        <option value='XL'>XL</option>
+                                    </Form.Control>
+                                </Form.Group>
+                            </Form>
+
                         </Col>
+
                         <Col md={5} lg={3} className="product_addtocart">
                             <Card>
                                 <ListGroup>

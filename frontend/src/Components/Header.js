@@ -56,7 +56,7 @@ const Header = () => {
                                 </NavDropdown>
                             )}
 
-                        <LinkContainer to="/cart">
+                        <LinkContainer to="/cart" className="header_cart">
                             <Nav.Link><i className="fas fa-shopping-cart fa-lg"></i> Panier</Nav.Link>
                         </LinkContainer>
                         </Nav>

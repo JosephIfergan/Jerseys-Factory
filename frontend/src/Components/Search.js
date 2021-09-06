@@ -20,11 +20,11 @@ const Search = ({ history }) => {
                 name='q'
                 onChange={(e) => setKeyword(e.target.value)}
                 placeholder='Chercher un maillot...'
-                className='mr-sm-2 ml-sm-5 rounded'
+                className='search_product mr-sm-2 ml-sm-5 rounded'
             >
 
             </Form.Control>
-            <Button type='submit' className='search bg-transparent'>
+            <Button type='submit' className='search_button bg-transparent'>
                 <i className="fas fa-search fa-2x"></i>
             </Button>
         </Form>
