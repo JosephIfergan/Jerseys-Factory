@@ -91,7 +91,7 @@ const Order = ({ match, history }) => {
         <Message variant='danger'>{error}</Message>
     ) : (
         <>
-            <h1 className="my-5">Commande n° {order._id}</h1>
+            <h1 className="order_title my-5">Commande n° {order._id}</h1>
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush'>
@@ -115,7 +115,7 @@ const Order = ({ match, history }) => {
                                   Livré le {order.deliveredAt.substring(0, 10)}
                                 </Message>
                             ) : (
-                                <Message variant='info'>En cours de livraison</Message>
+                                <Message variant='info'>En attente de livraison</Message>
                             )}
                         </ListGroup.Item>
 

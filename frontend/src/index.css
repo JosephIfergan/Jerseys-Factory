@@ -20,12 +20,15 @@ main {
 .navlogo {
     width: 100%;
 }
+.header_cart {
+    margin-left: 1rem;
+}
 
 .outofstock {
     color: red;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: #DCEAEA;
+    color: white;
 }
 
 #basic-navbar-nav {
@@ -273,8 +276,6 @@ footer .btn-sm {
 
 
 
-
-
 /*Responsive */
 
 @media screen and (max-width: 360px) {
@@ -355,12 +356,18 @@ footer .btn-sm {
     .textp:before, .textp:after {
         width: 20%;
     }
+    .navbar-nav {
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 360px) and (max-width: 530px) {
 
     .textp:before, .textp:after {
         display: none;
+    }
+    .order_title {
+        font-size: 1rem;
     }
 }
 

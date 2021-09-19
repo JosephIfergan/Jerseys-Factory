@@ -111,7 +111,9 @@ const ProductEdit = ({ match, history }) => {
                                 placeholder='Entrez le titre'
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                            ></Form.Control>
+                            >
+
+                            </Form.Control>
                         </Form.Group>
 
                         <Form.Group controlId='price'>
@@ -121,7 +123,9 @@ const ProductEdit = ({ match, history }) => {
                                 placeholder='Entrez le prix'
                                 value={price}
                                 onChange={(e) => setPrice(e.target.value)}
-                            ></Form.Control>
+                            >
+
+                            </Form.Control>
                         </Form.Group>
 
                         <Form.Group controlId='image'>
